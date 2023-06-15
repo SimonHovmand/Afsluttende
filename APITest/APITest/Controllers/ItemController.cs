@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace APITest.Controllers
+namespace API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -8,9 +8,9 @@ namespace APITest.Controllers
     {
 
         private readonly ILogger<ItemController> _logger;
-        private readonly DatabaseService _database;
+        private readonly DALManager _database;
 
-        public ItemController(ILogger<ItemController> logger, DatabaseService database)
+        public ItemController(ILogger<ItemController> logger, DALManager database)
         {
             _logger = logger;
             _database = database;

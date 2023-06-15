@@ -381,9 +381,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Programmering H1\\Afsluttende\\APITest\\APITest\\APITest.csproj",
-      "projectName": "APITest",
-      "projectPath": "C:\\Programmering H1\\Afsluttende\\APITest\\APITest\\APITest.csproj",
+      "projectUniqueName": "C:\\Programmering H1\\Afsluttende\\APITest\\APITest\\API.csproj",
+      "projectName": "API",
+      "projectPath": "C:\\Programmering H1\\Afsluttende\\APITest\\APITest\\API.csproj",
       "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
       "outputPath": "C:\\Programmering H1\\Afsluttende\\APITest\\APITest\\obj\\",
       "projectStyle": "PackageReference",

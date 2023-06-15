@@ -1,4 +1,4 @@
-using APITest;
+using API;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<DatabaseService>(); //dependency injection
+builder.Services.AddSingleton<DALManager>(); //dependency injection
 
 var app = builder.Build();
 

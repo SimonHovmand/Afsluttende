@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CV9Ch0MdZLyl7i2fTnPoqA64vaXo/D3bquBVUtRPmIADieF1uXzrLWBvK1/FVFTsG3qB8kD0XDLbkAZHMeHuYg==",
+  "dgSpecHash": "Jtrs8hQg36/zxDYTZi9Y4iDJgL6/chowxYzcnjPibScRHjup7/H1CPwKGnybVeFgnLB8gqdiQhYzxHQ1rD+ZGQ==",
   "success": true,
-  "projectFilePath": "C:\\Programmering H1\\Afsluttende\\APITest\\APITest\\APITest.csproj",
+  "projectFilePath": "C:\\Programmering H1\\Afsluttende\\APITest\\APITest\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bruger\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Bruger\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
