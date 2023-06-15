@@ -28,44 +28,77 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-black p-2 border2">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-black p-2 bordernav">
         <div class="container-fluid">
-            <a class="navbar-brand" style="color: #ffd277;" href="#">SHSkjorter</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link mx-2 navbarlink" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2 navbarlink navbarlink-active" href="basket.html">Basket</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
-                    <li class="nav-item mx-4">
-                        <a class="nav-link" href="" target="blank"><iconify-icon icon="mdi:basket" width="35"
-                                height="35" style="color: #ffd277;"></iconify-icon></a>
-                    </li>
-                </ul>
-            </div>
+          <a class="navbar-brand" style="color: #d18d04;" href="#">SHSkjorter</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-2 navbarlink" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 navbarlink navbarlink-active" href="basket.html">Basket</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
+              <li class="nav-item mx-4">
+                <a class="nav-link" href="basket.html" target="blank"><iconify-icon icon="mdi:basket" width="35" height="35"
+                    style="color: #d18d04;"></iconify-icon></a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
+      </nav>
+    
+    <div class="container mt-5">
+        <div class="row gap-5 justify-content-center">
+            <div class="col-7 rounded border border-light-subtle shadow">
+                <h2 class="py-3 border-bottom ">Shopping Cart</h2>
+                <div id="ShoppingCart" class="p-3">
 
-    <div class="container mt-5 ">
-        <div class="row gap-5 just justify-content-center">
-            <div class="col-7 bg-info-subtle">col-8
-                
-                
+                    <div class="d-flex flex-row justify-content-between align-items-center bg-light mb-3 p-3 rounded borderitem shadow">
+                        <div class="d-flex">
+                            <div><img class="rounded me-2" src="img/skjorte2.1.jpg" width="70"></div>
+                            <div><img class="rounded me-2" src="img/skjorte2.2.jpg" width="70"></div>
+                            <div><img class="rounded me-2" src="img/skjorte2.3.jpg" width="70"></div>
+                        </div>
+                        <div class="d-flex flex-column align-items-center"></san>
+                            <h6 class="text-center">Blue Link Hør Skjorte Hokus</h6>
+                            <p class="text-center" style="color: #888;">Size: Medium - Color: Blue</p>
+                        </div>
+                        <h6 class="text-grey">DKK 349</h6>
+                        <a class="link-dark" href="#"><iconify-icon icon="mdi:trash" width="35" height="35"></iconify-icon></a>
+                    </div>
+
+                    <div class="d-flex flex-row justify-content-between align-items-center bg-light mb-3 p-3 rounded borderitem shadow">
+                        <div class="d-flex">
+                            <div><img class="rounded me-2" src="img/skjorte2.1.jpg" width="70"></div>
+                            <div><img class="rounded me-2" src="img/skjorte2.2.jpg" width="70"></div>
+                            <div><img class="rounded me-2" src="img/skjorte2.3.jpg" width="70"></div>
+                        </div>
+                        <div class="d-flex flex-column align-items-center"></san>
+                            <h6 class="text-center">${data.name}</h6>
+                            <p class="text-center" style="color: #888;">Size: ${data.size} - Color ${data.color}</p>
+                        </div>
+                        <h6 class="text-grey">DKK ${data.price}</h6>
+                        <a class="link-dark" href="#"><iconify-icon icon="mdi:trash" width="35" height="35"></iconify-icon></a>
+                    </div>
+
+                    <a class="link-dark text-decoration-none" href="index.html">Tilbage</a>
+                </div>
             </div>
-            <div class="col-4 bg-info-subtle">col-4</div>
-        </div>
 
+            <div class="col-4 rounded border border-light-subtle shadow">
+                <h2 class="py-3 border-bottom ">Summery</h2>
+            </div>
+            
+        </div>
     </div>
-
 
 
 
