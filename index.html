@@ -13,8 +13,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
   <link rel="stylesheet" href="style.css">
-</head>
+  <link rel="stylesheet" href="script.js">
 
+</head>
 <body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
@@ -68,18 +69,23 @@
 
 <script>
 
-  function test(id) {
+  function AddToBasket(id) {
     console.log(id);
+    $.ajax({
+  url:"https://localhost:7088/Item/AddToBasket",
+  type:"POST",
+  data: JSON.stringify({ id: id, amount: 1 }),
+  contentType:"application/json; charset=utf-8",
+  dataType:"json",
+
+})
   }
 
   var mainContainer = document.getElementById('myData')
   let el = "";
 
-
   function display(data) {
-    // document.getElementById('for_each_example').innerHTML += data.name + '<br>'
-
-    el += `<div id="${data.id}" class="col-md-3 rounded-2 row justify-content-center ${data.amount > 0?'borderitem':'borderOFS'}">
+    el += `<div id="${data.id}" class="col-md-3 rounded-2 row justify-content-center ${data.amount > 0 ? 'borderitem' : 'borderOFS'}">
       <div class="container">
         <div class="row">
           <div class="col">
@@ -91,34 +97,23 @@
           </div>
         </div>
       </div>
-      <div id="color" class="row justify-content-center flex-row  gap-1 mt-2">
-        <button onclick="test()" type="button" class="rounded-5 border border-1 border-black showcolor"
-          style="background: ${data.color};"></button>
-      </div>
       <p class="text-center mt-2">${data.name}</p>
       <p class="text-center">DKK ${data.price}</p>
-      <button ${data.amount > 0?`onclick="test(${data.id})" type="button" class="Btn"`:`class="Btn2"`}></button>
+      <button ${data.amount > 0 ? `onclick="AddToBasket(${data.id})" type="button" class="Btn"` : `class="BtnFS"`}></button>
     </div>`
-
   }
 
   $(document).ready(function () {
     $.ajax({
-      url: "https://localhost:7088/Item"
+      url: "https://localhost:7088/Item/GetItem"
     }).then(function (data) {
 
       // for (i = 0; i < data.length; i++) {
       //   console.log(`Name ${data[i].name} - Price ${data[i].price} - Amount ${data[i].amount} - Image1 ${data[i].image1} - Image2 ${data[i].image2} - Image3 ${data[i].image3} - Size ${data[i].size} - COlor ${data[i].color} - ID: ${data[i].id}`);
       // }
-
       data.forEach(display)
-
       mainContainer.innerHTML = el;
     });
   });
-
-
-
 </script>
-
 </html>

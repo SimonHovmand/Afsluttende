@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class ItemController : ControllerBase
     {
 
@@ -17,14 +17,22 @@ namespace API.Controllers
         }
 
         [HttpGet(Name = "GetItem")]
-        public IEnumerable<Item> Get()
+        public IEnumerable<Item> GetItem()
         {
-            //List<Item> items = new List<Item>();
-            //items = _database.GetItem();
-            //foreach(Item d in items) {
-            //    Console.WriteLine(d.Name);
-            //}
             return _database.GetItem();
+        }
+
+        [HttpPost(Name = "AddToBasket")]
+        public void AddToBasket([FromBody] PostBasket pb)
+        {
+            _database.AddToBasket(pb.Id, pb.Amount);
+            Console.WriteLine("AddToBasket");
+        }
+
+        [HttpGet(Name = "CallBasket")]
+        public IEnumerable<BItem> CallBasket()
+        {
+            return _database.CallBasket();
         }
     }
 }
