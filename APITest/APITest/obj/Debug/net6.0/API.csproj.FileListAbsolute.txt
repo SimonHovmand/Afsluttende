@@ -31,3 +31,36 @@ C:\Programmering H1\Afsluttende\APITest\APITest\obj\Debug\net6.0\refint\API.dll
 C:\Programmering H1\Afsluttende\APITest\APITest\obj\Debug\net6.0\API.pdb
 C:\Programmering H1\Afsluttende\APITest\APITest\obj\Debug\net6.0\API.genruntimeconfig.cache
 C:\Programmering H1\Afsluttende\APITest\APITest\obj\Debug\net6.0\ref\API.dll
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\bin\Debug\net6.0\appsettings.Development.json
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\bin\Debug\net6.0\appsettings.json
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\bin\Debug\net6.0\API.exe
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\bin\Debug\net6.0\API.deps.json
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\bin\Debug\net6.0\API.runtimeconfig.json
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\bin\Debug\net6.0\API.dll
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\bin\Debug\net6.0\API.pdb
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\bin\Debug\net6.0\Npgsql.dll
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\API.csproj.AssemblyReference.cache
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\API.GeneratedMSBuildEditorConfig.editorconfig
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\API.AssemblyInfoInputs.cache
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\API.AssemblyInfo.cs
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\API.csproj.CoreCompileInputs.cache
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\API.MvcApplicationPartsAssemblyInfo.cs
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\API.MvcApplicationPartsAssemblyInfo.cache
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\staticwebassets\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\staticwebassets\msbuild.build.API.props
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.API.props
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.API.props
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\staticwebassets.pack.json
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\staticwebassets.build.json
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\staticwebassets.development.json
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\scopedcss\bundle\API.styles.css
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\API.csproj.CopyComplete
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\API.dll
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\refint\API.dll
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\API.pdb
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\API.genruntimeconfig.cache
+C:\SkoleOpgaver\Afsluttende\APITest\APITest\obj\Debug\net6.0\ref\API.dll

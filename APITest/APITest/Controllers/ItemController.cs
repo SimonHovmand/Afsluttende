@@ -26,7 +26,6 @@ namespace API.Controllers
         public void AddToBasket([FromBody] PostBasket pb)
         {
             _database.AddToBasket(pb.Id, pb.Amount);
-            Console.WriteLine("AddToBasket");
         }
 
         [HttpGet(Name = "CallBasket")]
@@ -34,5 +33,11 @@ namespace API.Controllers
         {
             return _database.CallBasket();
         }
+        [HttpPost(Name = "DelFromBasket")]
+        public void DelFromBasket([FromBody] PostBasket pb)
+        {
+            _database.DelFromBasket(pb.Id);
+        }
+
     }
 }

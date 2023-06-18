@@ -27,37 +27,37 @@
         integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
         crossorigin="anonymous"></script>
 
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-black p-2 bordernav">
         <div class="container-fluid">
-            <a class="navbar-brand" style="color: #d18d04;" href="#">SHSkjorter</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link mx-2 navbarlink" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2 navbarlink navbarlink-active" href="basket.html">Basket</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
-                    <li class="nav-item mx-4">
-                        <a class="nav-link" href="basket.html" target="blank"><iconify-icon icon="mdi:basket" width="35"
-                                height="35" style="color: #d18d04;"></iconify-icon></a>
-                    </li>
-                </ul>
-            </div>
+          <a class="navbar-brand" style="color: #d18d04;" href="#">SHSkjorter</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-2 navbarlink navbarlink-active" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 navbarlink" href="basket.html">Basket</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
+              <li class="nav-item mx-4">
+                <a class="nav-link navbarlink" href="basket.html"><i class="fa badge fa-lg" value=>&#xf07a;</i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
+      </nav>
 
     <div class="container mt-5">
         <div class="row gap-5 justify-content-center">
@@ -65,69 +65,37 @@
                 <h2 class="py-3 border-bottom ">Shopping Cart</h2>
                 <div id="ShoppingCart" class="p-3">
 
-                    <!-- <div
-                        class="d-flex flex-row justify-content-between align-items-center mb-3 p-3 rounded borderitem shadow">
-                        <div class="d-flex">
-                            <div><img class="rounded me-2" src="img/skjorte2.1.jpg" width="70"></div>
-                            <div><img class="rounded me-2" src="img/skjorte2.2.jpg" width="70"></div>
-                            <div><img class="rounded me-2" src="img/skjorte2.3.jpg" width="70"></div>
-                        </div>
-                        <div class="d-flex flex-column align-items-center">
-                            </san>
-                            <h6 class="text-center">${data.name}</h6>
-                            <p class="text-center" style="color: #888;">Size: ${data.size} - Color ${data.color}</p>
-                        </div>
-                        <h6>DKK 349</h6>
-                        <h6>1</h6>
-                        <a class="link-dark" href="#"><iconify-icon icon="mdi:trash" width="35"
-                                height="35"></iconify-icon></a>
-                    </div> -->
-
-                    <a class="link-dark text-decoration-none" href="index.html">Tilbage</a>
                 </div>
             </div>
 
             <div class="col-4 rounded border border-light-subtle shadow">
                 <h2 class="py-3 border-bottom ">Summary</h2>
+
             </div>
 
         </div>
     </div>
 
-    <!-- <div class="container my-5">
-        <div id="myData" class="row justify-content-center flex-row overflow-wrap gap-5">
-
-            <div id="${data.id}" class="col-md-3 rounded-2 row justify-content-center borderitem">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <img src="img/skjorte2.1.jpg" class="rounded img-fluid pt-3">
-                        </div>
-                        <div class="col-lg-4">
-                            <img src="img/skjorte2.2.jpg" class="rounded img-fluid pt-3">
-                            <img src="img/skjorte2.3.jpg" class="rounded img-fluid pt-3">
-                        </div>
-                    </div>
-                </div>
-                <div id="color" class="row justify-content-center flex-row  gap-1 mt-2">
-                    <button onclick="test()" type="button" class="rounded-5 border border-1 border-black showcolor"
-                        style="background: green"></button>
-                </div>
-                <p class="text-center mt-2">name</p>
-                <p class="text-center">DKK price</p>
-                <button onclick="test()" type="button" class="Btn" class="Btn2"></button>
-            </div>
-
-        </div>
-    </div> -->
-
 </body>
 <script>
+
+  function delfrombasket(id) {
+    $.ajax({
+      url: "https://localhost:7088/Item/DelFromBasket",
+      type: "POST",
+      data: JSON.stringify({ id: id}),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+
+    })
+    location.reload();
+  }
+
     var mainContainer = document.getElementById('ShoppingCart')
     let el = "";
 
     function display(data) {
-        el += `<div class="d-flex flex-row justify-content-between align-items-center mb-3 p-3 rounded borderitem shadow">
+        el += `<div id="${data.id}" class="d-flex flex-row justify-content-between align-items-center mb-3 p-3 rounded borderitem shadow">
                 <div class="d-flex">
                     <div><img class="rounded me-2" src="img/${data.image1}" width="70"></div>
                     <div><img class="rounded me-2" src="img/${data.image2}" width="70"></div>
@@ -139,7 +107,7 @@
                 </div>
                 <h6>DKK ${data.price}</h6>
                 <h6> ${data.amount}</h6>
-                <a class="link-dark" href="#"><iconify-icon icon="mdi:trash" width="35" height="35"></iconify-icon></a>
+                <a class="link-dark" onclick="delfrombasket(${data.id})"><iconify-icon icon="mdi:trash" width="35" height="35"></iconify-icon></a>
             </div>`
     }
 
