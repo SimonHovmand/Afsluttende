@@ -52,11 +52,9 @@
         </ul>
         <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
           <li class="nav-item mx-4">
-            <a class="nav-link navbarlink" href="basket.html"><i class="fa badge fa-lg" value=8>&#xf07a;</i>
-            </a>
+            <a class="nav-link navbarlink" href="basket.html"><i class="fa badge fa-lg" value=8>&#xf07a;</i></a>
           </li>
         </ul>
-
       </div>
     </div>
   </nav>
@@ -77,8 +75,11 @@
       data: JSON.stringify({ id: id, amount: 1 }),
       contentType: "application/json; charset=utf-8",
       dataType: "json",
-
     })
+    setTimeout(() => {
+      location.reload();
+    }, 250);
+    document.getElementById(id).style.border = "1px solid #66ff00";
   }
 
   var mainContainer = document.getElementById('myData')
@@ -107,10 +108,6 @@
     $.ajax({
       url: "https://localhost:7088/Item/GetItem"
     }).then(function (data) {
-
-      // for (i = 0; i < data.length; i++) {
-      //   console.log(`Name ${data[i].name} - Price ${data[i].price} - Amount ${data[i].amount} - Image1 ${data[i].image1} - Image2 ${data[i].image2} - Image3 ${data[i].image3} - Size ${data[i].size} - COlor ${data[i].color} - ID: ${data[i].id}`);
-      // }
       data.forEach(display)
       mainContainer.innerHTML = el;
     });

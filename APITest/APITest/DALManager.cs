@@ -22,7 +22,7 @@ namespace API
                     using (NpgsqlCommand command = new NpgsqlCommand())
                     {
                         command.Connection = connection;
-                        command.CommandText = "SELECT * FROM item";
+                        command.CommandText = "SELECT * FROM item order by id";
 
                         connection.Open();
 
@@ -95,7 +95,7 @@ namespace API
                     using (NpgsqlCommand command = new NpgsqlCommand())
                     {
                         command.Connection = connection;
-                        command.CommandText = "SELECT * FROM callbasket();";
+                        command.CommandText = "SELECT * FROM callbasket() order by id;";
 
                         connection.Open();
 
