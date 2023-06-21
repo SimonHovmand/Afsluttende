@@ -29,11 +29,11 @@
 
     public class BItem
     {
-        public BItem(string name, int price, int item_amount, string image1, string image2, string image3, string color, string size, int amount, int iD)
+        public BItem(string name, int price, int itemamount, string image1, string image2, string image3, string color, string size, int amount, int iD)
         {
             Name = name;
             Price = price;
-            Item_Amount = item_amount;
+            ItemAmount = itemamount;
             Image1 = image1;
             Image2 = image2;
             Image3 = image3;
@@ -45,7 +45,7 @@
 
         public string Name { get; set; }
         public int Price { get; set; }
-        public int Item_Amount { get; set; }
+        public int ItemAmount { get; set; }
         public string Image1 { get; set; }
         public string Image2 { get; set; }
         public string Image3 { get; set; }

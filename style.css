@@ -86,7 +86,7 @@
 }
 
 
-.BtnFS {
+.BtnOS {
     margin-bottom: 10px;
     width: 75%;
     height: 35px;
@@ -105,7 +105,7 @@
     overflow: hidden;
 }
 
-.BtnFS::before {
+.BtnOS::before {
     position: absolute;
     content: "Udsolgt";
     color: #ff0000;

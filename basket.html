@@ -7,19 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHSkjorter</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
-
+    <!-- bootstrap link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
+    <!-- jquary link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
 </head>
+
 <body>
+    <!-- bootstrap scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
@@ -30,72 +33,123 @@
         integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
         crossorigin="anonymous"></script>
 
+    <!-- Navbar -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-black p-2 bordernav">
         <div class="container-fluid">
-          <a class="navbar-brand" style="color: #d18d04;" href="#">SHSkjorter</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-    
-          <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link mx-2 navbarlink" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-2 navbarlink navbarlink-active" href="basket.html">Basket</a>
-              </li>
-            </ul>
-            <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
-              <li class="nav-item mx-4">
-                <a id="amountIcon" class="nav-link navbarlink" href="basket.html"><i class="fa badge fa-lg" value =  >&#xf07a;</i></a>
-              </li>
-            </ul>
-          </div>
+            <a class="navbar-brand" style="color: #d18d04;" href="#">SHSkjorter</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 navbarlink" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 navbarlink navbarlink-active" href="basket.html">Basket</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
+                    <li class="nav-item mx-4">
+                        <a id="amountIcon" class="nav-link navbarlink" href="basket.html"><i class="fa badge fa-lg"
+                                value=0>&#xf07a;</i></a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
 
-    <div class="container mt-5">
-        <div class="row gap-5 justify-content-center">
-            <div class="col-7 rounded border border-light-subtle shadow">
-                <h2 class="py-3 border-bottom">Shopping Cart</h2>
-                <div id="ShoppingCart" class="p-3">
+    <!-- Body -->
+    <div class="m-5 row gap-5 justify-content-center">
 
-                </div>
-            </div>
-
-            <div class="col-4 rounded border border-light-subtle shadow">
-                <h2 class="py-3 border-bottom ">Summary</h2>
+        <!-- ShoppingCart div -->
+        <div class="col-7 rounded border border-light-subtle shadow">
+            <h2 class="py-3 border-bottom">Shopping Cart</h2>
+            <div id="ShoppingCart" class="p-3">
 
             </div>
+        </div>
 
+        <!-- Summary div -->
+        <div class="col-3 rounded border border-light-subtle shadow">
+            <h2 class="py-3 border-bottom">Summary</h2>
+
+            <!-- Subtotal -->
+            <div class="d-flex flex-row justify-content-between border-bottom my-4">
+                <p>Subtotal</p>
+                <p id="SummarySubtotal"></p>
+            </div>
+
+            <!-- Moms
+            <div class="d-flex flex-row justify-content-between border-bottom mb-4">
+                <p>Moms udgør</p>
+                <p id="SummaryMoms"></p>
+            </div> -->
+
+            <!-- Levering -->
+            <div class="d-flex flex-row justify-content-between border-bottom mb-4">
+                <p>Levering</p>
+                <p>39,00 kr</p>
+            </div>
+
+            <!-- Pris i alt -->
+            <div class="d-flex flex-row justify-content-between border-bottom mb-4">
+                <h5>Pris i alt (inkl. moms)</h5>
+                <h5 id="SummaryPrice"></h5>
+            </div>
+
+            <div class="d-grid">
+                <button class="btn btn-success mb-4" onclick="buy()" type="button">Videre til kassen</button>
+            </div>
         </div>
     </div>
-
 </body>
 <script>
-
-  function delfrombasket(id) {
-    $.ajax({
-      url: "https://localhost:7088/Item/DelFromBasket",
-      type: "POST",
-      data: JSON.stringify({ id: id}),
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
-
-    })
-    
-    setTimeout(() => {
-      location.reload();
-    }, 250);
-  }
-
-    var mainContainer = document.getElementById('ShoppingCart')
     let el = "";
+    var mainContainer = document.getElementById('ShoppingCart')
 
+    function buy() {
+        alert("Købet er fuldført")
+    }
+
+    function amount0()
+    {
+        alert("Der er ikke flere trøjer på lager!")
+    }
+
+    // Add to basket function
+    function AddToBasket(id) {
+        $.ajax({
+            url: "https://localhost:7088/Item/AddToBasket",
+            type: "POST",
+            data: JSON.stringify({ id: id, amount: 1 }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+        })
+        setTimeout(() => {
+            location.reload();
+        }, 150);
+    }
+
+    // Del from basket function
+    function DelFromBasket(id) {
+        $.ajax({
+            url: "https://localhost:7088/Item/DelFromBasket",
+            type: "POST",
+            data: JSON.stringify({ id: id }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+        })
+        setTimeout(() => {
+            location.reload();
+        }, 150);
+    }
+
+    // display basket function
     function display(data) {
-        el += `<div id="${data.id}" class="d-flex flex-row justify-content-between align-items-center mb-3 p-3 rounded borderitem shadow">
+        el += `<div id="${data.id}" class="d-flex justify-content-between align-items-center mb-4 p-3 rounded borderitem shadow">
                 <div class="d-flex">
                     <div><img class="rounded me-2" src="img/${data.image1}" width="70"></div>
                     <div><img class="rounded me-2" src="img/${data.image2}" width="70"></div>
@@ -107,19 +161,47 @@
                 </div>
                 <h6>DKK ${data.price}</h6>
                 <h6> ${data.amount}</h6>
-                <a class="link-dark" onclick="delfrombasket(${data.id})"><i class="fas fa-trash fa-sm"></i></a>
+                <div>
+                    ${data.itemAmount > 0 ? `<a class="link-dark" onclick="AddToBasket(${data.id})"><i class="fas fa-plus fa-sm"></i></a>` : ` `}
+                    <a class="link-dark" onclick="DelFromBasket(${data.id})"><i class="fas fa-minus fa-sm"></i></a>
+                </div>
             </div>`
     }
 
+    // Callbasket function
     $(document).ready(function () {
         $.ajax({
             url: "https://localhost:7088/Item/CallBasket"
         }).then(function (data) {
 
+            data.forEach(element => {
+                console.log(element)
+            });
             data.forEach(display)
             mainContainer.innerHTML = el;
         });
     });
-</script>
 
+    // Summary function - calls a c# method that caluclate subtotal, moms, price & totalamount
+    $(document).ready(function () {
+        $.ajax({
+            url: "https://localhost:7088/Item/Summary"
+        }).then(function (data) {
+
+            data.forEach(displaysum)
+        });
+    });
+
+    // display basketsum
+    function displaysum(data) {
+        document.getElementById("SummarySubtotal").innerHTML = `${data.subTotal} kr`;
+        // document.getElementById("SummaryMoms").innerHTML = `${data.moms} kr`;
+        document.getElementById("SummaryPrice").innerHTML = `${data.price} kr`;
+
+        var myStr = '<a><i class="fa badge fa-lg" value= amount>&#xf07a;</i></a>';
+        var newStr = myStr.replace(/amount/g, data.totalAmount);
+
+        document.getElementById("amountIcon").innerHTML = newStr;
+    }
+</script>
 </html>
