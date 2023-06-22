@@ -1,8 +1,8 @@
 ﻿namespace API
 {
-    public class BSum
+    public class BSum //Public class BSum
     {
-        public BSum(int subtotal, double moms, int price, int totalamount)
+        public BSum(int subtotal, double moms, int price, int totalamount) //Constructor
         {
             SubTotal = subtotal;
             Moms = moms;

@@ -1,8 +1,8 @@
 ﻿namespace API
 {
-    public class Item
+    public class Item //Public class Item
     {
-        public Item(string name, int price, int amount, string image1, string image2, string image3, int size, int color, int iD)
+        public Item(string name, int price, int amount, string image1, string image2, string image3, int size, int color, int iD) //Constructor
         {
             Name = name;
             Price = price;
@@ -27,9 +27,9 @@
 
     }
 
-    public class BItem
+    public class BItem //Public class BItem
     {
-        public BItem(string name, int price, int itemamount, string image1, string image2, string image3, string color, string size, int amount, int iD)
+        public BItem(string name, int price, int itemamount, string image1, string image2, string image3, string color, string size, int amount, int iD) //Constructor
         {
             Name = name;
             Price = price;

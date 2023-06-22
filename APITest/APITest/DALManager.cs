@@ -11,35 +11,36 @@ namespace API
             Configuration = configuration;
         }
 
+        //GetItem method - calls GetItem sql command
         public List<Item> GetItem()
         {
-            List<Item> test = new List<Item>();
+            List<Item> ItemList = new List<Item>();
 
-            using (NpgsqlConnection connection = new NpgsqlConnection(Configuration["ConnectionString"]))
+            using (NpgsqlConnection connection = new NpgsqlConnection(Configuration["ConnectionString"])) //Connecting to Npgsql using the ConnectionString
             {
                 try
                 {
                     using (NpgsqlCommand command = new NpgsqlCommand())
                     {
                         command.Connection = connection;
-                        command.CommandText = "SELECT * FROM item order by id";
+                        command.CommandText = "SELECT * FROM item order by id"; //The SQL command "SELECT * FROM item order by id"
 
                         connection.Open();
 
                         using (NpgsqlDataReader reader = command.ExecuteReader())
                         {
-                            while (reader.Read())
+                            while (reader.Read()) //While reader.read is true - add a new item of Item to the ItemList with the values.
                             {
-                                test.Add(new Item(reader.GetString(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetInt32(6), reader.GetInt32(7), reader.GetInt32(8)));
+                                ItemList.Add(new Item(reader.GetString(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetInt32(6), reader.GetInt32(7), reader.GetInt32(8)));
                             }
                         }
                     }
                 }
-                catch (NpgsqlException e)
+                catch (NpgsqlException e) //Cathes Npgsql errors
                 {
                     Debug.WriteLine("An NPG error occurred: " + e.Message);
                 }
-                catch (Exception ex)
+                catch (Exception ex) //Cathes all errors
                 {
                     Debug.WriteLine("An error occurred: " + ex.Message);
                 }
@@ -48,27 +49,28 @@ namespace API
                     connection.Close();
                 }
             }
-            return test;
+            return ItemList; //Returns ItemList list
         }
 
+        //CallBasket method - calls CallBasket sql command
         public List<BItem> CallBasket()
         {
-        List<BItem> Blist = new List<BItem>();
+        List<BItem> Blist = new List<BItem>(); //Create a list with the class BItem 
 
-            using (NpgsqlConnection connection = new NpgsqlConnection(Configuration["ConnectionString"]))
+            using (NpgsqlConnection connection = new NpgsqlConnection(Configuration["ConnectionString"])) //Connecting to Npgsql using the ConnectionString
             {
                 try
                 {
                     using (NpgsqlCommand command = new NpgsqlCommand())
                     {
                         command.Connection = connection;
-                        command.CommandText = "SELECT * FROM callbasket() order by id;";
+                        command.CommandText = "SELECT * FROM callbasket() order by id;"; //The SQL command "SELECT * FROM callbasket() order by id"
 
                         connection.Open();
 
                         using (NpgsqlDataReader reader = command.ExecuteReader())
                         {
-                            while (reader.Read())
+                            while (reader.Read()) //While reader.read is true - add a new item of BItem to the Blist with the values.
                             {
                                 Blist.Add(new BItem(reader.GetString(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetInt32(8), reader.GetInt32(9)));
                             }
@@ -76,11 +78,11 @@ namespace API
                     }
                 }
 
-                catch (NpgsqlException e)
+                catch (NpgsqlException e) //Cathes Npgsql errors
                 {
                     Debug.WriteLine("An NPG error occurred: " + e.Message);
                 }
-                catch (Exception ex)
+                catch (Exception ex) //Cathes all errors
                 {
                     Debug.WriteLine("An error occurred: " + ex.Message);
                 }
@@ -89,32 +91,33 @@ namespace API
                     connection.Close();
                 }
             }
-            return Blist;
+            return Blist; //Returns Blist list
         }
 
+        //AddToBasket method - calls AddToBasket sql command with the item id and item amount
         public void AddToBasket(int id, int amount)
         {
-            using (NpgsqlConnection connection = new NpgsqlConnection(Configuration["ConnectionString"]))
+            using (NpgsqlConnection connection = new NpgsqlConnection(Configuration["ConnectionString"])) //Connecting to Npgsql using the ConnectionString
             {
                 try
                 {
                     using (NpgsqlCommand command = new NpgsqlCommand())
                     {
                         command.Connection = connection;
-                        command.CommandText = "call addtobasket ($1, $2)";
-                        command.Parameters.Add(new NpgsqlParameter() { Value = id });
-                        command.Parameters.Add(new NpgsqlParameter() { Value = amount });
+                        command.CommandText = "call addtobasket ($1, $2)"; //The SQL command "call delfrombasket ($1)"
+                        command.Parameters.Add(new NpgsqlParameter() { Value = id }); //Sets the first parameter valuer to id
+                        command.Parameters.Add(new NpgsqlParameter() { Value = amount }); //Sets the second parameter valuer to amount
 
                         connection.Open();
 
                         command.ExecuteNonQuery();
                     }
                 }
-                catch (NpgsqlException e)
+                catch (NpgsqlException e) //Cathes Npgsql errors
                 {
                     Debug.WriteLine("An NPG error occurred: " + e.Message);
                 }
-                catch (Exception ex)
+                catch (Exception ex) //Cathes all errors
                 {
                     Debug.WriteLine("An error occurred: " + ex.Message);
                 }
@@ -125,28 +128,29 @@ namespace API
             }
         }
 
+        // DeleteFromBasket method - calls delfrembasket sql command with the item id
         public void DelFromBasket(int id)
         {
-            using (NpgsqlConnection connection = new NpgsqlConnection(Configuration["ConnectionString"]))
+            using (NpgsqlConnection connection = new NpgsqlConnection(Configuration["ConnectionString"])) //Connecting to Npgsql using the ConnectionString
             {
                 try
                 {
                     using (NpgsqlCommand command = new NpgsqlCommand())
                     {
                         command.Connection = connection;
-                        command.CommandText = "call delfrombasket ($1)";
-                        command.Parameters.Add(new NpgsqlParameter() { Value = id });
+                        command.CommandText = "call delfrombasket ($1)"; //The SQL command "call delfrombasket ($1)"
+                        command.Parameters.Add(new NpgsqlParameter() { Value = id }); //Sets the first parameter valuer to id
 
                         connection.Open();
 
                         command.ExecuteNonQuery();
                     }
                 }
-                catch (NpgsqlException e)
+                catch (NpgsqlException e) //Cathes Npgsql errors
                 {
                     Debug.WriteLine("An NPG error occurred: " + e.Message);
                 }
-                catch (Exception ex)
+                catch (Exception ex) //Cathes all errors
                 {
                     Debug.WriteLine("An error occurred: " + ex.Message);
                 }
@@ -166,14 +170,14 @@ namespace API
             int price = 0;
             int totalamount = 0;
 
-            using (NpgsqlConnection connection = new NpgsqlConnection(Configuration["ConnectionString"])) //Connect to NpgsqlConnection
+            using (NpgsqlConnection connection = new NpgsqlConnection(Configuration["ConnectionString"])) //Connecting to Npgsql using the ConnectionString
             {
                 try
                 {
                     using (NpgsqlCommand command = new NpgsqlCommand())
                     {
                         command.Connection = connection;
-                        command.CommandText = "SELECT * FROM callbasket() order by id;"; //Select all from callbasket() - from the database
+                        command.CommandText = "SELECT * FROM callbasket() order by id;"; //The SQL command "Select all from callbasket()
 
                         connection.Open();
 
@@ -191,11 +195,11 @@ namespace API
                     BSum.Add(new BSum(subtotal, moms, price, totalamount)); //adds subtotal, moms, price & totalamount to BSum list
                 }
 
-                catch (NpgsqlException e) //Checks for Npgsql errors
+                catch (NpgsqlException e) //Cathes Npgsql errors
                 {
                     Debug.WriteLine("An NPG error occurred: " + e.Message);
                 }
-                catch (Exception ex) //Checks for all errors
+                catch (Exception ex) //Cathes all errors
                 {
                     Debug.WriteLine("An error occurred: " + ex.Message);
                 }
