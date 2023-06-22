@@ -110,7 +110,7 @@ namespace API
 
                         connection.Open();
 
-                        command.ExecuteNonQuery();
+                        command.ExecuteNonQuery(); //execute the SQL command - Dosent return any value
                     }
                 }
                 catch (NpgsqlException e) //Cathes Npgsql errors
@@ -143,7 +143,7 @@ namespace API
 
                         connection.Open();
 
-                        command.ExecuteNonQuery();
+                        command.ExecuteNonQuery(); //execute the SQL command - Dosent return any value
                     }
                 }
                 catch (NpgsqlException e) //Cathes Npgsql errors
